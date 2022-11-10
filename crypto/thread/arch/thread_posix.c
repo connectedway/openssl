@@ -22,9 +22,10 @@ static void *thread_start_thunk(void *vthread)
 
     thread = (CRYPTO_THREAD *)vthread;
 
+#if 0
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
-
+#endif
     ret = thread->routine(thread->data);
     ossl_crypto_mutex_lock(thread->statelock);
     CRYPTO_THREAD_SET_STATE(thread, CRYPTO_THREAD_FINISHED);

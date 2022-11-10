@@ -14,6 +14,12 @@
 /tmp.*
 /configdata.pm
 
+/android-build/aarch64-linux-android33
+/android-build/armv7a-linux-androideabi33
+/android-build/i686-linux-android33
+/android-build/x86_64-linux-android33
+/install-ndk
+
 # Links under apps
 /apps/CA.pl
 /apps/tsget
